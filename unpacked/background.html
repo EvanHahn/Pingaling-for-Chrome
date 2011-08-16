@@ -9,7 +9,7 @@
 		var Pingaling = {};
 		
 		// Config variables
-		Pingaling.toPing = "http://github.com/EvanHahn/Pingaling-for-Chrome/raw/master/server/pingaling.gif";
+		Pingaling.toPing = "http://github.com/EvanHahn/Pingaling-for-Chrome/raw/master/server/pingaling.png";
 		Pingaling.waitTime = 2000;	// in milliseconds
 		Pingaling.badStart = 5;	// in seconds
 		Pingaling.goodBackground = "-webkit-gradient(linear, left top, left bottom, color-stop(0%,#dfd), color-stop(100%,#f0fff0))";
@@ -43,11 +43,11 @@
 				if (since < Pingaling.badStart) {
 					// Good
 					document.body.style.background = Pingaling.goodBackground;
-					chrome.browserAction.setIcon({ path: "good.gif" });
+					chrome.browserAction.setIcon({ path: "good.png" });
 				} else {
 					// Bad
 					document.body.style.background = Pingaling.badBackground;
-					chrome.browserAction.setIcon({ path: "bad.gif" });
+					chrome.browserAction.setIcon({ path: "bad.png" });
 					chrome.browserAction.setBadgeBackgroundColor({ color: [255, 0, 0, 255] });
 					chrome.browserAction.setBadgeText({ text: since });
 				}

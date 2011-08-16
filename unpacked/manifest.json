@@ -7,7 +7,7 @@
 	
 	// Actual stuff
 	"browser_action": {
-		"default_icon": "unsure.gif",
+		"default_icon": "unsure.png",
 		"default_title": "Pingaling",
 		"default_popup": "background.html"
 	},
