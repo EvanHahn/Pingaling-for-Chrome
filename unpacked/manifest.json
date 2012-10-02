@@ -7,11 +7,14 @@
 	
 	"browser_action": {
 		"default_icon": "unsure.png",
-		"default_title": "Pingaling",
-		"default_popup": "background.html"
+		"default_title": "Pingaling"
 	},
+
 	"background": {
-		"page": "background.html"
+		"scripts": [
+			"pingaling.js",
+			"background.js"
+		]
 	}
 
 }
