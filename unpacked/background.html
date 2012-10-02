@@ -4,21 +4,21 @@
 
 	<!-- Scripts -->
 	<script type="text/javascript">
-		
+
 		// "Namespacing"
 		var Pingaling = {};
-		
+
 		// Config variables
 		Pingaling.toPing = "http://github.com/EvanHahn/Pingaling-for-Chrome/raw/master/server/pingaling.png";
 		Pingaling.waitTime = 2000;	// in milliseconds
 		Pingaling.badStart = 5;	// in seconds
 		Pingaling.goodBackground = "-webkit-gradient(linear, left top, left bottom, color-stop(0%,#dfd), color-stop(100%,#f0fff0))";
 		Pingaling.badBackground = "-webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdd), color-stop(100%,#fff0f0))";	
-		
+
 		// The meat of the code
 		Pingaling.lastResponse = Date.now();
 		Pingaling.ping = function() {
-			
+
 			// Try loading an image
 			var img = new Image();
 			img.onload = function() {
@@ -27,18 +27,18 @@
 			img.src = Pingaling.toPing + "?" + Date.now();
 			
 		};
-		
+
 		// Let's go for it!
 		window.onload = function() {
 			setInterval(Pingaling.ping, Pingaling.waitTime);
 			setInterval(function() {
-		
+
 				// How long until the last response?
 				var since = Math.floor((Date.now() - Pingaling.lastResponse) / 1000);
 				var s = "s";
 				if (since === 1) s = "";
 				document.getElementById("seconds").innerHTML = since + " second" + s;
-				
+
 				// How good is this?
 				if (since < Pingaling.badStart) {
 					// Good
@@ -54,12 +54,12 @@
 
 			}, 500);
 		};
-		
+
 	</script>
 
 	<!-- Styles -->
 	<style type="text/css">
-		
+
 		* {
 			margin: 0;
 			padding: 0;
@@ -77,7 +77,7 @@
 			font-weight: bold;
 			font-size: 3em;
 		}
-	
+
 	</style>
 
 </head>
