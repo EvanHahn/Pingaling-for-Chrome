@@ -1,19 +1,17 @@
 {
 
-	// Meta
 	"name": "Pingaling",
 	"version": "1.0",
 	"description": "Pingaling monitors your network status by constantly checking for a connection.",
+	"manifest_version": 2,
 	
-	// Actual stuff
 	"browser_action": {
 		"default_icon": "unsure.png",
 		"default_title": "Pingaling",
 		"default_popup": "background.html"
 	},
-	"background_page": "background.html",
-	"permissions": [
-		"http://www.evanhahn.com"
-	]
+	"background": {
+		"page": "background.html"
+	}
 
 }
