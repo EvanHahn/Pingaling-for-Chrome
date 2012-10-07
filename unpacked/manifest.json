@@ -1,7 +1,7 @@
 {
 
 	"name": "Pingaling",
-	"version": "1.0",
+	"version": "1.1",
 	"description": "Pingaling monitors your network status by constantly checking for a connection.",
 	"manifest_version": 2,
 	
@@ -15,6 +15,15 @@
 			"pingaling.js",
 			"background.js"
 		]
+	},
+
+	"icons": {
+		"16": "icon-16.png",
+		"32": "icon-32.png",
+		"48": "icon-48.png",
+		"64": "icon-64.png",
+		"128": "icon-128.png",
+		"256": "icon-256.png"
 	}
 
 }
