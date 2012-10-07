@@ -1,6 +1,6 @@
 Icon by Icons Land. <http://www.icons-land.com>
 
-Copyright (c) 2011 Evan Hahn and contributors
+Copyright (c) 2011-2012 Evan Hahn and contributors
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
