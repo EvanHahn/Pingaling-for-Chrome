@@ -1,12 +1,9 @@
 window.onload = function() {
 
-	setInterval(Pingaling.ping, Pingaling.waitTime);
 	setInterval(function() {
 
-		var since = Math.floor((Date.now() - Pingaling.lastResponse) / 1000);
-
 		// Everything's all good!
-		if (since < Pingaling.BAD_START) {
+		if (navigator.onLine) {
 			chrome.browserAction.setIcon({ path: 'good.png' });
 			chrome.browserAction.setBadgeText({ text: '' });
 		}
@@ -18,6 +15,6 @@ window.onload = function() {
 			chrome.browserAction.setBadgeText({ text: ('' + since) });
 		}
 
-	}, 500);
+	}, 100);
 
 };
